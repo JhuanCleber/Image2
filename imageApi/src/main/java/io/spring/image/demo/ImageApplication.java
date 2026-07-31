@@ -1,20 +1,11 @@
 package io.spring.image.demo;
 
-import io.spring.image.demo.domain.entity.Image;
-import io.spring.image.demo.domain.enums.ImageExtension;
-import io.spring.image.demo.infra.repository.ImageRepository;
-import org.aspectj.apache.bcel.Repository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.Bean;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
-@EnableJpaAuditing
-
-
+@EnableJpaAuditing //não esquecer de colocar para que ele coloque em nosso banco de Dados
 public class ImageApplication {
 
 //	@Bean
@@ -24,6 +15,7 @@ public class ImageApplication {
 //					.builder()
 //					.extension(ImageExtension.JPEG)
 //					.name("myimage")
+//					.tags("teste")
 //					.size(1000L)
 //					.build();
 //			repository.save(image);

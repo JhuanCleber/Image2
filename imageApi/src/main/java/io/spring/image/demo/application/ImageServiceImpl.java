@@ -14,7 +14,6 @@ import java.util.Optional;
 
 @Service
 @RequiredArgsConstructor
-
 public class ImageServiceImpl implements ImageService {
 
     private final ImageRepository repository;
@@ -25,7 +24,6 @@ public class ImageServiceImpl implements ImageService {
 
         return repository.save(image);
     }
-
 
     @Override
     public Optional<Image> getById(String id) {
