@@ -6,7 +6,11 @@ export default function Home() {
     <div>
       <main>
         <h1>Welcome to Next.js!</h1>
-        <PrimeiroComponente/>
+        <PrimeiroComponente
+        mensagem="Esta é uma mensagem passada como propriedade para o PrimeiroComponete."
+         mensagemBotao="Você clicou no botão"
+        />
+
       </main>
     </div>
   );
