@@ -1,10 +1,14 @@
-import { Template } from "../components/Template"
+import { Template } from "../components/Template";
+import { ImageCard } from "../components/Image";
+
 
 export default function Galeria() {
   return (
       <main>
         <Template>
-          <h1>Galeria</h1>
+          <select className="grid grid-cols-3 gap-8">
+            <ImageCard />
+          </select>
         </Template>       
       </main>     
   )
