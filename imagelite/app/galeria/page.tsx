@@ -1,14 +1,8 @@
-<<<<<<< HEAD
 'use client'
 import { Template, ImageCard } from '../components';
 import { useImageService } from '../resource/service';
 import { useState } from 'react';
 import { Image } from '../resource/image';
-=======
-import { Template } from "../components/Template";
-import { ImageCard } from "../components/Image";
-
->>>>>>> 10cf04dfcdbafcb88f98dd748c15b2eb137afcf4
 
 export default function Galeria() {
 
@@ -41,7 +35,6 @@ export default function Galeria() {
 
 
   return (
-<<<<<<< HEAD
     <Template>
       <section className="flex flex-col items-center justify-center my-5">
         <div className="flex space-x-4">
@@ -83,14 +76,3 @@ export default function Galeria() {
 
 
 }
-=======
-      <main>
-        <Template>
-          <select className="grid grid-cols-3 gap-8">
-            <ImageCard />
-          </select>
-        </Template>       
-      </main>     
-  )
-}
->>>>>>> 10cf04dfcdbafcb88f98dd748c15b2eb137afcf4
