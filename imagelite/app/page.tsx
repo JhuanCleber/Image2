@@ -7,9 +7,9 @@ export default function Home() {
       <main>
         <h1>Welcome to Next.js!</h1>
         <PrimeiroComponente
-        mensagem="Esta é uma mensagem passada como propriedade para o PrimeiroComponete."
+        mensagem="Olá, mundo!"
          mensagemBotao="Você clicou no botão"
-        />
+        />       
 
       </main>
     </div>
