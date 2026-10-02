@@ -2,21 +2,23 @@ interface TemplateProps {
   children: React.ReactNode;
 }
 
-export const Template: React.FC<TemplateProps> =({children}: TemplateProps) => {
-  return(
-    <>
-      <Header/>
-      {children}
-      <Footer/>
-    </>
+export const Template: React.FC<TemplateProps> = ({ children }: TemplateProps) => {
+  return (
+    <div className="flex min-h-screen flex-col bg-green-950">
+      <Header />
+      <main className="flex-1">{children}</main>
+      <Footer />
+    </div>
   );
 }
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-indigo-950 text-white py-3" >
-      <div className="container mx-auto flex justify-between items-center px-4">
-        <h1 className="text-3x1 font-bol">ImageLite</h1>
+    <header className="border-b-4 border-yellow-400 bg-green-900 py-3 text-white">
+      <div className="container mx-auto flex items-center justify-between px-4">
+        <h1 className="text-3xl font-bold">
+          Image<span className="text-yellow-400">Lite</span>
+        </h1>
       </div>
     </header>
   );
@@ -24,9 +26,9 @@ const Header: React.FC = () => {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-indigo-950 text-white py-4 mt-8">
+    <footer className="border-t-4 border-yellow-400 bg-green-900 py-4 text-white">
       <div className="container mx-auto text-center">
-        <h1 >Desenvolvido por Jhuan </h1>
+        <h1>Desenvolvido por Jhuan</h1>
       </div>
     </footer>
   )

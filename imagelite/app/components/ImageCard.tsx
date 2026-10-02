@@ -14,14 +14,13 @@
     }
 
    return(
-    <div className="card relative bg-white round''ed-md shadow-md transition-all ease-in-out duration-300 hover:shadow-xl hover:-translate-y-1"> 
-    <img onClick={downloadImage} src={imageUrl} className="h-56 w-full object-cover rounded-t-md" alt="Thumbnail" />
+    <div className="card relative overflow-hidden rounded-md border border-yellow-400/40 bg-green-900 shadow-md transition-all duration-300 ease-in-out hover:-translate-y-1 hover:border-yellow-400 hover:shadow-xl hover:shadow-yellow-400/20">
+    <img onClick={downloadImage} src={imageUrl} className="h-56 w-full cursor-pointer object-cover" alt="Thumbnail" />
     <div className="card-body p-4">
-     <h1 className="text-xl font-semibold mb-2 text-gray-600">{imageName}</h1>
-     <p className="text-xl font-semibold mb-2
-     text-gray-600">{formatBytes(Number(imageSize))}</p>
-     <p className="text-xl font-semibold mb-2 text-gray-600">{uploadDate}</p>
-     <p className="text-xl font-semibold mb-2 text-gray-600">{extension}</p>
+     <h1 className="mb-2 text-xl font-semibold text-yellow-300">{imageName}</h1>
+     <p className="mb-2 text-xl font-semibold text-white/80">{formatBytes(Number(imageSize))}</p>
+     <p className="mb-2 text-xl font-semibold text-white/80">{uploadDate}</p>
+     <p className="mb-2 text-xl font-semibold text-white/80">{extension}</p>
     </div>
     </div>
   )
