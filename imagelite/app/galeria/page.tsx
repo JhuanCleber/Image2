@@ -3,14 +3,18 @@ import { Template, ImageCard } from '../components';
 import { ImageService, useImageService } from '../resource/service';
 import { useState } from 'react';
 import { Image } from '../resource/image';
+import { useRouter } from 'next/navigation';
+import { Button } from '../components';
 
 export default function Galeria() {
 
   const useService = useImageService();
+  const router = useRouter();
   const [images, setImages] = useState<Image[]>([]);
   const [query, setQuery] = useState<string>('')
   const [extension, setExtension] = useState<string>('')
   const [loading, setLoading] = useState<boolean>(false)
+
 
   async function searchImages() {
     setLoading(true);
@@ -22,7 +26,7 @@ export default function Galeria() {
       setLoading(false);
     }
   }
-  /*renderizando a imagem na tela*/
+
   function renderImageCard(image: Image) {
     return (
       <ImageCard key={image.url}
@@ -57,7 +61,13 @@ export default function Galeria() {
               <option className="bg-green-950" value="GIF">GIF</option>
             </select>
             <button className="rounded bg-gradient-to-r from-green-500 to-yellow-400 px-4 py-2 font-bold text-green-950 transition hover:scale-105 disabled:cursor-not-allowed disabled:opacity-60" onClick={searchImages} disabled={loading}>Search </button>
-            <button className="rounded bg-yellow-400 px-4 py-2 font-bold text-green-950 transition hover:bg-yellow-300">Add New </button>
+            <Button
+              type="button"
+              variant="danger"
+              onClick={() => router.push('/upload')}
+            >
+              Add New
+            </Button>
           </div>
         </section>
         {loading ? (
