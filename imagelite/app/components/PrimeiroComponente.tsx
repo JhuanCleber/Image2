@@ -22,8 +22,8 @@ export const PrimeiroComponente = ({
         {/* Imagem em public/bolsonaro.webp */}
         <div className="mb-6 h-40 w-40 overflow-hidden rounded-full border-4 border-yellow-400 shadow-lg shadow-yellow-400/30">
           <Image
-            src="/bolsonaro.webp"
-            alt="Jair Bolsonaro"
+            src="/images.jpg"
+            alt="Image Lite"
             width={160}
             height={160}
             className="h-full w-full object-cover object-top"
@@ -32,14 +32,14 @@ export const PrimeiroComponente = ({
         </div>
 
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl">
-          Jair{' '}
+          Image{' '}
           <span className="bg-gradient-to-r from-green-400 to-yellow-300 bg-clip-text text-transparent">
-            Bolsonaro
+            Lite
           </span>
         </h1>
 
         <p className="mt-3 max-w-md text-lg font-semibold text-yellow-300">
-          Brasil acima de tudo, Deus acima de todos
+          
         </p>
 
         {mensagem && (
